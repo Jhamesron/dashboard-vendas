@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Vendas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Dashboard de Vendas</h1>
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab(event, 'tab1')">Resumo</button>
+            <button class="tab-button" onclick="openTab(event, 'tab2')">Detalhes</button>
+        </div>
+    </header>
+
+    <div id="tab1" class="tab-content active">
+        <div class="chart-container">
+            <h2>Gráfico de Vendas</h2>
+            <canvas id="salesChart"></canvas>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Loja</th>
+                        <th>Vendas</th>
+                        <th>Meta</th>
+                        <th>Diferença</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="loja-1"><td>Loja 1</td><td>10.000</td><td>15.000</td><td class="negative"><i>-</i>5.000</td></tr>
+                    <tr class="loja-2"><td>Loja 2</td><td>18.000</td><td>15.000</td><td class="positive"><i>+</i>3.000</td></tr>
+                    <tr class="total"><td>Total</td><td colspan="3">28.000</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="tab2" class="tab-content">
+        <p>Conteúdo da segunda aba.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
